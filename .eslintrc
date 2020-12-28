@@ -1,0 +1,32 @@
+// https://github.com/airbnb/javascript
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "plugins": ["@babel/plugin-syntax-top-level-await"]
+    }
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:promise/recommended",
+    "plugin:unicorn/recommended",
+    "prettier",
+    "prettier/unicorn"
+  ],
+  "rules": {
+    "import/extensions": ["error", "ignorePackages"],
+    "no-console": [
+      "error",
+      {
+        "allow": ["error", "info", "warn"]
+      }
+    ],
+    "unicorn/import-index": ["error", { "ignoreImports": true }],
+    "unicorn/prevent-abbreviations": [
+      "error",
+      { "whitelist": { "args": true } }
+    ]
+  }
+}
